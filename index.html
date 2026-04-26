@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a3c2e" />
+  <meta name="description" content="Aveiro Green App — Guia de reciclagem e ecopontos de Aveiro" />
+  <title>Aveiro Green App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-header">
+    <span class="logo-icon">🌿</span>
+    <h1>Aveiro Green</h1>
+    <span>Aveiro, Portugal</span>
+  </header>
+
+  <main class="container page">
+
+    <div class="hero-card">
+      <div class="eyebrow">♻️ Sustentabilidade Urbana</div>
+      <h2>Recicla melhor,<br>vive melhor.</h2>
+      <p>Encontra os ecopontos mais próximos, aprende a separar corretamente e vê o impacto real das tuas ações.</p>
+      <div class="stats-row">
+        <div class="stat-chip"><strong>15+</strong> Ecopontos</div>
+        <div class="stat-chip"><strong>5</strong> Tipos de resíduo</div>
+        <div class="stat-chip">100% Grátis</div>
+      </div>
+    </div>
+
+    <div class="section-label">O que queres fazer?</div>
+
+    <div class="cards-grid">
+      <a href="mapa.html" class="feature-card">
+        <div class="card-icon">🗺️</div>
+        <div class="card-title">Mapa de Ecopontos</div>
+        <div class="card-desc">Localiza o ponto de reciclagem mais próximo</div>
+      </a>
+      <a href="guia.html" class="feature-card">
+        <div class="card-icon">📋</div>
+        <div class="card-title">Guia de Reciclagem</div>
+        <div class="card-desc">O que vai em cada contentor</div>
+      </a>
+      <a href="calculadora.html" class="feature-card">
+        <div class="card-icon">🌱</div>
+        <div class="card-title">Calculadora de Impacto</div>
+        <div class="card-desc">Vê quanto CO₂ evitaste com a reciclagem</div>
+      </a>
+      <a href="guia.html#dicas" class="feature-card">
+        <div class="card-icon">💡</div>
+        <div class="card-title">Dicas Rápidas</div>
+        <div class="card-desc">Erros comuns e como evitá-los</div>
+      </a>
+    </div>
+
+    <div class="section-label">Sobre o projeto</div>
+
+    <div class="info-card">
+      <h3>🎓 Projeto de Extensão Universitária</h3>
+      <p>Esta aplicação foi desenvolvida no âmbito do Projeto de Extensão III do Bacharelado em Engenharia de Software, em parceria com o Posto Prio de Aveiro, com o objetivo de promover boas práticas de reciclagem junto à comunidade local.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>🤝 Parceiro Institucional</h3>
+      <p>Posto de Combustíveis Prio — Aveiro, Portugal. A Prio acredita que a sustentabilidade começa nas pequenas ações do dia a dia.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>📱 Funciona offline</h3>
+      <p>Após a primeira visita, este app funciona sem ligação à internet. Ideal para usar em qualquer momento, mesmo sem dados móveis.</p>
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item active">
+      <span class="nav-icon">🏠</span>
+      Início
+    </a>
+    <a href="mapa.html" class="nav-item">
+      <span class="nav-icon">🗺️</span>
+      Mapa
+    </a>
+    <a href="guia.html" class="nav-item">
+      <span class="nav-icon">📋</span>
+      Guia
+    </a>
+    <a href="calculadora.html" class="nav-item">
+      <span class="nav-icon">🌱</span>
+      Impacto
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+
+</body>
+</html>

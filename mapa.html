@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a3c2e" />
+  <title>Mapa de Ecopontos — Aveiro Green App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <header class="top-header">
+    <span class="logo-icon">🗺️</span>
+    <h1>Mapa de Ecopontos</h1>
+    <span>Aveiro</span>
+  </header>
+
+  <main class="container page">
+
+    <div class="badge">📍 15 ecopontos mapeados</div>
+
+    <div id="map"></div>
+
+    <div class="section-label">Lista de ecopontos</div>
+
+    <div class="ecoponto-list" id="ecoponto-list">
+      <!-- gerado pelo app.js -->
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      Início
+    </a>
+    <a href="mapa.html" class="nav-item active">
+      <span class="nav-icon">🗺️</span>
+      Mapa
+    </a>
+    <a href="guia.html" class="nav-item">
+      <span class="nav-icon">📋</span>
+      Guia
+    </a>
+    <a href="calculadora.html" class="nav-item">
+      <span class="nav-icon">🌱</span>
+      Impacto
+    </a>
+  </nav>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+    initMap();
+    renderEcopontoList();
+  </script>
+
+</body>
+</html>

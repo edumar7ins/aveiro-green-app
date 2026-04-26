@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a3c2e" />
+  <title>Calculadora de Impacto — Aveiro Green App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-header">
+    <span class="logo-icon">🌱</span>
+    <h1>Calculadora de Impacto</h1>
+    <span>CO₂ evitado</span>
+  </header>
+
+  <main class="container page">
+
+    <div class="badge">🌍 Baseado em dados da APA — Agência Portuguesa do Ambiente</div>
+
+    <div class="result-card">
+      <div class="result-label">CO₂ evitado hoje</div>
+      <div class="result-value" id="co2-value">0,0</div>
+      <div class="result-unit">kg de CO₂ equivalente</div>
+      <div class="result-msg" id="result-msg">Regista o que reciclaste para ver o teu impacto.</div>
+    </div>
+
+    <div class="calc-section">
+      <h3>📦 Embalagens e Plásticos <span style="font-size:0.7rem;font-weight:300;color:var(--text-light)">(unidades)</span></h3>
+
+      <div class="calc-item">
+        <label><span>🥤</span> Garrafas PET (plástico)</label>
+        <div class="calc-controls">
+          <button class="calc-btn" onclick="change('pet', -1)">−</button>
+          <span class="calc-qty" id="qty-pet">0</span>
+          <button class="calc-btn" onclick="change('pet', 1)">+</button>
+        </div>
+      </div>
+
+      <div class="calc-item">
+        <label><span>🥫</span> Latas de alumínio</label>
+        <div class="calc-controls">
+          <button class="calc-btn" onclick="change('lata', -1)">−</button>
+          <span class="calc-qty" id="qty-lata">0</span>
+          <button class="calc-btn" onclick="change('lata', 1)">+</button>
+        </div>
+      </div>
+
+      <div class="calc-item">
+        <label><span>📦</span> Caixas de cartão</label>
+        <div class="calc-controls">
+          <button class="calc-btn" onclick="change('cartao', -1)">−</button>
+          <span class="calc-qty" id="qty-cartao">0</span>
+          <button class="calc-btn" onclick="change('cartao', 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-section">
+      <h3>📰 Papel e Vidro <span style="font-size:0.7rem;font-weight:300;color:var(--text-light)">(unidades)</span></h3>
+
+      <div class="calc-item">
+        <label><span>📰</span> Jornais / revistas</label>
+        <div class="calc-controls">
+          <button class="calc-btn" onclick="change('papel', -1)">−</button>
+          <span class="calc-qty" id="qty-papel">0</span>
+          <button class="calc-btn" onclick="change('papel', 1)">+</button>
+        </div>
+      </div>
+
+      <div class="calc-item">
+        <label><span>🍾</span> Garrafas de vidro</label>
+        <div class="calc-controls">
+          <button class="calc-btn" onclick="change('vidro', -1)">−</button>
+          <span class="calc-qty" id="qty-vidro">0</span>
+          <button class="calc-btn" onclick="change('vidro', 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-section">
+      <h3>🥗 Orgânicos <span style="font-size:0.7rem;font-weight:300;color:var(--text-light)">(porções aprox. 200g)</span></h3>
+
+      <div class="calc-item">
+        <label><span>🥦</span> Restos de comida / cascas</label>
+        <div class="calc-controls">
+          <button class="calc-btn" onclick="change('organico', -1)">−</button>
+          <span class="calc-qty" id="qty-organico">0</span>
+          <button class="calc-btn" onclick="change('organico', 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h3>ℹ️ Como é calculado?</h3>
+      <p>Os valores de CO₂ evitado são estimativas baseadas nos fatores de emissão publicados pela Agência Portuguesa do Ambiente (APA) e pela Agência Europeia do Ambiente (EEA). Cada material reciclado evita a extração de matéria-prima virgem, reduzindo as emissões de gases com efeito de estufa.</p>
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      Início
+    </a>
+    <a href="mapa.html" class="nav-item">
+      <span class="nav-icon">🗺️</span>
+      Mapa
+    </a>
+    <a href="guia.html" class="nav-item">
+      <span class="nav-icon">📋</span>
+      Guia
+    </a>
+    <a href="calculadora.html" class="nav-item active">
+      <span class="nav-icon">🌱</span>
+      Impacto
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+    initCalculator();
+  </script>
+
+</body>
+</html>

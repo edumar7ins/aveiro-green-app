@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a3c2e" />
+  <title>Guia de Reciclagem — Aveiro Green App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-header">
+    <span class="logo-icon">📋</span>
+    <h1>Guia de Reciclagem</h1>
+    <span>O que vai onde</span>
+  </header>
+
+  <main class="container page">
+
+    <div class="badge">💡 Toca em cada contentor para expandir</div>
+
+    <div id="waste-guide">
+      <!-- gerado pelo app.js -->
+    </div>
+
+    <div id="dicas" class="section-label mt-8">Erros mais comuns</div>
+
+    <div class="info-card">
+      <h3>🚫 Não laves as embalagens</h3>
+      <p>Não é necessário lavar — basta retirar os restos de comida. Lavar gasta água desnecessariamente.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>🚫 Sacos de plástico não vão no amarelo</h3>
+      <p>Os sacos de plástico normais vão para o resíduo indiferenciado (preto/cinza). Apenas embalagens rígidas vão no amarelo.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>🚫 Papel molhado ou engordurado</h3>
+      <p>Papel de cozinha usado, guardanapos e papel engordurado (como caixas de pizza sujas) não vão no azul — vão no indiferenciado.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>🚫 Pilhas e eletrodomésticos</h3>
+      <p>Pilhas, baterias e pequenos eletrodomésticos têm contentores específicos nas superfícies comerciais e juntas de freguesia. Nunca vão nos ecopontos normais.</p>
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      Início
+    </a>
+    <a href="mapa.html" class="nav-item">
+      <span class="nav-icon">🗺️</span>
+      Mapa
+    </a>
+    <a href="guia.html" class="nav-item active">
+      <span class="nav-icon">📋</span>
+      Guia
+    </a>
+    <a href="calculadora.html" class="nav-item">
+      <span class="nav-icon">🌱</span>
+      Impacto
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+    renderWasteGuide();
+  </script>
+
+</body>
+</html>
