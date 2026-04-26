@@ -31,29 +31,29 @@
       <h3>📦 Embalagens e Plásticos <span style="font-size:0.7rem;font-weight:300;color:var(--text-light)">(unidades)</span></h3>
 
       <div class="calc-item">
-        <label><span>🥤</span> Garrafas PET (plástico)</label>
-        <div class="calc-controls">
-          <button class="calc-btn" onclick="change('pet', -1)">−</button>
-          <span class="calc-qty" id="qty-pet">0</span>
-          <button class="calc-btn" onclick="change('pet', 1)">+</button>
+        <label id="label-pet"><span aria-hidden="true">🥤</span> Garrafas PET (plástico)</label>
+        <div class="calc-controls" role="group" aria-labelledby="label-pet">
+          <button class="calc-btn" onclick="change('pet', -1)" aria-label="Remover garrafa PET">−</button>
+          <span class="calc-qty" id="qty-pet" aria-live="polite" aria-label="quantidade">0</span>
+          <button class="calc-btn" onclick="change('pet', 1)" aria-label="Adicionar garrafa PET">+</button>
         </div>
       </div>
 
       <div class="calc-item">
-        <label><span>🥫</span> Latas de alumínio</label>
-        <div class="calc-controls">
-          <button class="calc-btn" onclick="change('lata', -1)">−</button>
-          <span class="calc-qty" id="qty-lata">0</span>
-          <button class="calc-btn" onclick="change('lata', 1)">+</button>
+        <label id="label-lata"><span aria-hidden="true">🥫</span> Latas de alumínio</label>
+        <div class="calc-controls" role="group" aria-labelledby="label-lata">
+          <button class="calc-btn" onclick="change('lata', -1)" aria-label="Remover lata de alumínio">−</button>
+          <span class="calc-qty" id="qty-lata" aria-live="polite" aria-label="quantidade">0</span>
+          <button class="calc-btn" onclick="change('lata', 1)" aria-label="Adicionar lata de alumínio">+</button>
         </div>
       </div>
 
       <div class="calc-item">
-        <label><span>📦</span> Caixas de cartão</label>
-        <div class="calc-controls">
-          <button class="calc-btn" onclick="change('cartao', -1)">−</button>
-          <span class="calc-qty" id="qty-cartao">0</span>
-          <button class="calc-btn" onclick="change('cartao', 1)">+</button>
+        <label id="label-cartao"><span aria-hidden="true">📦</span> Caixas de cartão</label>
+        <div class="calc-controls" role="group" aria-labelledby="label-cartao">
+          <button class="calc-btn" onclick="change('cartao', -1)" aria-label="Remover caixa de cartão">−</button>
+          <span class="calc-qty" id="qty-cartao" aria-live="polite" aria-label="quantidade">0</span>
+          <button class="calc-btn" onclick="change('cartao', 1)" aria-label="Adicionar caixa de cartão">+</button>
         </div>
       </div>
     </div>
@@ -62,20 +62,20 @@
       <h3>📰 Papel e Vidro <span style="font-size:0.7rem;font-weight:300;color:var(--text-light)">(unidades)</span></h3>
 
       <div class="calc-item">
-        <label><span>📰</span> Jornais / revistas</label>
-        <div class="calc-controls">
-          <button class="calc-btn" onclick="change('papel', -1)">−</button>
-          <span class="calc-qty" id="qty-papel">0</span>
-          <button class="calc-btn" onclick="change('papel', 1)">+</button>
+        <label id="label-papel"><span aria-hidden="true">📰</span> Jornais / revistas</label>
+        <div class="calc-controls" role="group" aria-labelledby="label-papel">
+          <button class="calc-btn" onclick="change('papel', -1)" aria-label="Remover jornal ou revista">−</button>
+          <span class="calc-qty" id="qty-papel" aria-live="polite" aria-label="quantidade">0</span>
+          <button class="calc-btn" onclick="change('papel', 1)" aria-label="Adicionar jornal ou revista">+</button>
         </div>
       </div>
 
       <div class="calc-item">
-        <label><span>🍾</span> Garrafas de vidro</label>
-        <div class="calc-controls">
-          <button class="calc-btn" onclick="change('vidro', -1)">−</button>
-          <span class="calc-qty" id="qty-vidro">0</span>
-          <button class="calc-btn" onclick="change('vidro', 1)">+</button>
+        <label id="label-vidro"><span aria-hidden="true">🍾</span> Garrafas de vidro</label>
+        <div class="calc-controls" role="group" aria-labelledby="label-vidro">
+          <button class="calc-btn" onclick="change('vidro', -1)" aria-label="Remover garrafa de vidro">−</button>
+          <span class="calc-qty" id="qty-vidro" aria-live="polite" aria-label="quantidade">0</span>
+          <button class="calc-btn" onclick="change('vidro', 1)" aria-label="Adicionar garrafa de vidro">+</button>
         </div>
       </div>
     </div>
@@ -84,11 +84,11 @@
       <h3>🥗 Orgânicos <span style="font-size:0.7rem;font-weight:300;color:var(--text-light)">(porções aprox. 200g)</span></h3>
 
       <div class="calc-item">
-        <label><span>🥦</span> Restos de comida / cascas</label>
-        <div class="calc-controls">
-          <button class="calc-btn" onclick="change('organico', -1)">−</button>
-          <span class="calc-qty" id="qty-organico">0</span>
-          <button class="calc-btn" onclick="change('organico', 1)">+</button>
+        <label id="label-organico"><span aria-hidden="true">🥦</span> Restos de comida / cascas</label>
+        <div class="calc-controls" role="group" aria-labelledby="label-organico">
+          <button class="calc-btn" onclick="change('organico', -1)" aria-label="Remover porção orgânica">−</button>
+          <span class="calc-qty" id="qty-organico" aria-live="polite" aria-label="quantidade">0</span>
+          <button class="calc-btn" onclick="change('organico', 1)" aria-label="Adicionar porção orgânica">+</button>
         </div>
       </div>
     </div>
@@ -100,21 +100,21 @@
 
   </main>
 
-  <nav class="bottom-nav">
-    <a href="index.html" class="nav-item">
-      <span class="nav-icon">🏠</span>
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <a href="index.html" class="nav-item" aria-label="Início">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
       Início
     </a>
-    <a href="mapa.html" class="nav-item">
-      <span class="nav-icon">🗺️</span>
+    <a href="mapa.html" class="nav-item" aria-label="Mapa de Ecopontos">
+      <span class="nav-icon" aria-hidden="true">🗺️</span>
       Mapa
     </a>
-    <a href="guia.html" class="nav-item">
-      <span class="nav-icon">📋</span>
+    <a href="guia.html" class="nav-item" aria-label="Guia de Reciclagem">
+      <span class="nav-icon" aria-hidden="true">📋</span>
       Guia
     </a>
-    <a href="calculadora.html" class="nav-item active">
-      <span class="nav-icon">🌱</span>
+    <a href="calculadora.html" class="nav-item active" aria-current="page" aria-label="Calculadora de Impacto">
+      <span class="nav-icon" aria-hidden="true">🌱</span>
       Impacto
     </a>
   </nav>
